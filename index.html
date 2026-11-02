@@ -109,6 +109,10 @@
   .role h3{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.25}
   .role .when{font-size:13px;color:var(--muted);font-weight:500;background:#f3efe7;padding:4px 12px;border-radius:999px;white-space:nowrap}
   .now{display:inline-block;vertical-align:middle;margin-left:10px;font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#1d7a52;background:#e3f4ec;padding:3px 10px;border-radius:999px}
+  .others{margin-top:16px}
+  .others div{display:grid;grid-template-columns:1.3fr 1fr auto;gap:12px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
+  .others b{font-weight:600;color:var(--ink)} .others span{color:var(--ink-2);font-size:14.5px} .others em{font-style:normal;color:var(--muted);font-size:13.5px;white-space:nowrap}
+  @media (max-width:700px){.others div{grid-template-columns:1fr;gap:2px}}
   .role .org{font-size:14.5px;color:var(--accent);font-weight:500;margin-top:2px}
   .role ul{list-style:none;margin-top:14px}
   .role li{position:relative;padding-left:22px;margin-top:9px;color:var(--ink-2);font-size:15.3px}
@@ -318,13 +322,15 @@
         </ul>
           </div>
     <div class="role reveal">
-      <div class="top"><h3>Additional experience</h3><span class="when">Sep 2023 – Present</span></div>
-        
-        <ul>
-          <li>Customer service and technology sales (part-time) at Bunnings, Officeworks and Harvey Norman.</li>
-          <li>AI Quality Assurance Evaluator (freelance, remote) at Outlier, Sep 2024 – Jan 2025.</li>
-        </ul>
-          </div>
+      <div class="top"><h3>Other roles</h3><span class="when">Part-time &amp; freelance</span></div>
+        <div class="org">Customer service, sales and quality assurance alongside study and full-time work</div>
+        <div class="others">
+          <div><b>Customer Service Representative</b><span>Bunnings · part-time</span><em>Jul 2025 – Present</em></div>
+          <div><b>Technology Sales</b><span>Officeworks · part-time</span><em>Sep 2023 – Nov 2025</em></div>
+          <div><b>AI Quality Assurance Evaluator</b><span>Outlier · freelance, remote</span><em>Sep 2024 – Jan 2025</em></div>
+          <div><b>Technology Sales Floor Team Member</b><span>Harvey Norman · part-time</span><em>Sep 2023 – Nov 2023</em></div>
+        </div>
+    </div>
     </div>
   </div>
 </section>
