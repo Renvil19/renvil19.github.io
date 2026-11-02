@@ -183,6 +183,116 @@
   footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:13px;padding:0 0 40px}
   footer .wrap{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 
+
+  /* ===== analyst additions ===== */
+  .approach{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--line);border-radius:18px;background:var(--card);box-shadow:var(--shadow);overflow:hidden}
+  .approach div{padding:26px 22px;position:relative}
+  .approach div+div{border-left:1px solid var(--line)}
+  .approach .n{font-family:var(--serif);font-size:15px;color:var(--gold);font-weight:500}
+  .approach h4{font-family:var(--serif);font-size:21px;font-weight:500;margin:4px 0 8px}
+  .approach p{font-size:13.8px;color:var(--ink-2);line-height:1.55}
+  .approach small{display:block;margin-top:12px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .approach div:not(:last-child)::after{content:"";position:absolute;right:-7px;top:34px;width:12px;height:12px;background:var(--card);border-top:1px solid var(--line);border-right:1px solid var(--line);transform:rotate(45deg);z-index:1}
+
+  .case{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:38px 42px;margin-bottom:26px}
+  .case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;margin-bottom:26px}
+  .case .kicker{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .case h3{font-family:var(--serif);font-size:29px;font-weight:500;line-height:1.2;margin-top:6px;max-width:26ch}
+  .kpi{display:flex;gap:12px;flex-wrap:wrap}
+  .kpi div{border:1px solid var(--line);border-radius:14px;padding:12px 18px;min-width:130px;background:#fbfaf7}
+  .kpi b{display:block;font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.05;color:var(--ink)}
+  .kpi span{font-size:12.5px;color:var(--muted)}
+  .pax{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .pax h5{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .pax h5 i{font-style:normal;width:22px;height:22px;border-radius:50%;background:var(--accent-soft);display:grid;place-items:center;font-size:11px}
+  .pax p{font-size:15px;color:var(--ink-2)}
+  .flow{margin-top:30px;padding-top:26px;border-top:1px dashed var(--line)}
+  .flow-label{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:14px}
+  .steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .steps span{font-size:13.5px;background:var(--accent-soft);color:var(--accent);font-weight:500;padding:7px 14px;border-radius:10px}
+  .steps em{font-style:normal;color:var(--gold);font-weight:600}
+  .ba{display:grid;grid-template-columns:90px 1fr 70px;gap:14px;align-items:center;margin-top:12px;font-size:14px}
+  .ba .lbl{color:var(--ink-2);font-weight:500}
+  .ba .track{height:14px;background:#f1efe9;border-radius:4px;overflow:hidden}
+  .ba .bar{height:100%;border-radius:0 4px 4px 0}
+  .ba .val{color:var(--ink);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+  .cases-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .cases-mini .case{padding:30px;margin:0}
+  .cases-mini h3{font-size:22px}
+  .cases-mini .pax{grid-template-columns:1fr;gap:14px;margin-top:18px}
+  .cases-mini .pax p{font-size:14.3px}
+  .big{font-family:var(--serif);font-size:40px;line-height:1;color:var(--ink);margin-top:16px}
+  .big small{font-family:var(--sans);font-size:13px;color:var(--muted);margin-left:6px}
+
+  /* dashboard */
+  .dash{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+  .dash-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;padding:30px 36px 0}
+  .dash-head h3{font-family:var(--serif);font-size:28px;font-weight:500;line-height:1.2}
+  .dash-head .src{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .tiles{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:24px}
+  .tiles div{padding:20px 26px}
+  .tiles div+div{border-left:1px solid var(--line)}
+  .tiles small{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .tiles b{display:block;font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.1;margin-top:4px;color:var(--ink)}
+  .tiles span{font-size:13px;color:var(--ink-2)}
+  .ctrl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:22px 36px 0}
+  .seg{display:inline-flex;background:#f3efe7;border-radius:999px;padding:4px}
+  .seg button{border:0;background:transparent;font:500 13.5px var(--sans);color:var(--ink-2);padding:8px 16px;border-radius:999px;cursor:pointer}
+  .seg button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(15,27,45,.12)}
+  .ctrl .tbl-btn{margin-left:auto;border:1px solid var(--line);background:var(--card);font:500 13px var(--sans);color:var(--ink-2);padding:8px 14px;border-radius:999px;cursor:pointer}
+  .chart-area{display:grid;grid-template-columns:1fr 300px;gap:0}
+  .chart-wrap{position:relative;padding:12px 24px 24px 24px}
+  .legend{display:flex;gap:18px;font-size:13px;color:var(--ink-2);padding:6px 12px 0}
+  .legend i{display:inline-block;width:14px;height:3px;border-radius:2px;vertical-align:middle;margin-right:7px}
+  #chart{width:100%;height:auto;display:block;touch-action:none}
+  #chart text{font-family:var(--sans)}
+  .tip{position:absolute;pointer-events:none;background:var(--navy);color:#fff;border-radius:10px;padding:10px 12px;font-size:12.5px;line-height:1.5;box-shadow:0 10px 30px -10px rgba(0,0,0,.5);opacity:0;transition:opacity .12s;min-width:170px;z-index:3}
+  .tip b{font-size:13px}
+  .tip .r{display:flex;justify-content:space-between;gap:14px}
+  .tip .sw{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+  .insight{border-left:1px solid var(--line);padding:26px 28px;background:#fbfaf7}
+  .insight h5{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .insight p{font-size:14.5px;color:var(--ink-2);margin-top:10px}
+  .insight p b{color:var(--ink)}
+  .dtable{display:none;padding:0 36px 26px}
+  .dtable.show{display:block}
+  .dtable table{font-size:13.5px}
+  .dash-foot{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 36px 26px;border-top:1px solid var(--line)}
+  .dash-foot p{font-size:13.5px;color:var(--muted);max-width:70ch}
+  .dash-foot .gh{margin-top:0}
+
+  /* toolkit matrix */
+  .matrix{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow-x:auto}
+  .matrix table{min-width:720px}
+  .matrix th,.matrix td{padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px}
+  .matrix thead th{background:#fbfaf7;text-align:center}
+  .matrix thead th:first-child{text-align:left}
+  .matrix td{text-align:center;color:var(--ink-2)}
+  .matrix td:first-child{text-align:left;color:var(--ink);font-weight:500}
+  .matrix td small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+  .matrix tr:last-child td{border-bottom:none}
+  .matrix tbody tr:hover td{background:#fbfaf7}
+  .chk{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700}
+  .grp td{background:#f3efe7 !important;font-size:11.5px !important;letter-spacing:.12em;text-transform:uppercase;color:var(--gold) !important;font-weight:600 !important;padding:9px 18px !important}
+
+  @media (max-width:960px){
+    .approach{grid-template-columns:1fr}
+    .approach div+div{border-left:none;border-top:1px solid var(--line)}
+    .approach div::after{display:none}
+    .pax,.cases-mini{grid-template-columns:1fr}
+    .case{padding:26px}
+    .tiles{grid-template-columns:1fr 1fr}
+    .tiles div:nth-child(3){border-left:none}
+    .tiles div:nth-child(n+3){border-top:1px solid var(--line)}
+    .chart-area{grid-template-columns:1fr}
+    .insight{border-left:none;border-top:1px solid var(--line)}
+    .dash-head,.ctrl,.dtable,.dash-foot{padding-left:22px;padding-right:22px}
+    .chart-wrap{padding:8px 10px 18px}
+    .seg{flex-wrap:wrap;border-radius:16px}
+    .seg button{font-size:12.5px;padding:7px 12px}
+    .ctrl .tbl-btn{margin-left:0}
+  }
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease}
   .reveal.in{opacity:1;transform:none}
@@ -215,9 +325,10 @@
     <a class="brand" href="#top">Renvil Furtado<i>.</i></a>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#cases">Case studies</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#toolkit">Toolkit</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -226,12 +337,12 @@
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Business Analyst · Perth, WA</div>
+      <div class="eyebrow">Business &amp; Data Analyst · Perth, WA</div>
       <h1>Turning messy processes into <em>clear, workable</em> change.</h1>
       <p class="lede">I elicit requirements, map current and future-state processes, and use data to show what should change and why. Master of Business Analytics (UWA), currently a <strong style="color:#fff;font-weight:500">Broker Onboarding Consultant at Beyond Bank Australia</strong>.</p>
       <div class="chips"><span>Requirements · BRD/FRD</span><span>BPMN process mapping</span><span>Agile delivery</span><span>SQL · Power BI · Python</span></div>
       <div class="cta">
-        <a class="btn primary" href="#projects">View my work →</a>
+        <a class="btn primary" href="#cases">View case studies →</a>
         <a class="btn ghost" href="https://www.linkedin.com/in/renvilfurtado-6b419b238" target="_blank" rel="noopener">LinkedIn profile</a>
       </div>
     </div>
@@ -279,10 +390,161 @@
   </div>
 </section>
 
+<section id="approach" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">02 · Approach</div>
+      <div><h2>How I <em>work.</em></h2><p>The same five steps sit behind every project below, from a bank onboarding desk to a non-profit volunteer program.</p></div>
+    </div>
+    <div class="approach reveal">
+      <div><span class="n">01</span><h4>Discover</h4><p>Interviews, workshops, observation and document review to understand how work really happens.</p><small>EdConnect workshops</small></div>
+      <div><span class="n">02</span><h4>Analyse</h4><p>Map the AS-IS process, find the root cause, and back it with data.</p><small>500+ survey responses</small></div>
+      <div><span class="n">03</span><h4>Define</h4><p>Capture requirements in BRDs, FRDs, user stories and acceptance criteria.</p><small>BRD · FRD · MoSCoW</small></div>
+      <div><span class="n">04</span><h4>Design &amp; deliver</h4><p>Design the TO-BE process and support delivery through sprints and stand-ups.</p><small>Scrum · MS Project</small></div>
+      <div><span class="n">05</span><h4>Embed &amp; measure</h4><p>Turn the change into guides, checklists or policy, and track the result.</p><small>Adopted by 18 colleagues</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">03 · Case studies</div>
+      <div><h2>Problems I've <em>solved.</em></h2><p>Each one set out as the problem, what I did, and the result.</p></div>
+    </div>
+
+    <article class="case reveal">
+      <div class="case-top">
+        <div><div class="kicker">EdConnect Australia · Non-profit · Nov 2024 – May 2025</div><h3>Cutting volunteer onboarding from about a week to three days</h3></div>
+        <div class="kpi"><div><b>+30%</b><span>onboarded within 3 days</span></div><div><b>500+</b><span>survey responses</span></div></div>
+      </div>
+      <div class="pax">
+        <div><h5><i>P</i>Problem</h5><p>New volunteers were taking about a week to get through onboarding, including the Working With Children Check, delaying when they could start.</p></div>
+        <div><h5><i>A</i>Approach</h5><p>Ran requirements workshops, documented them in a BRD and FRD, mapped the AS-IS process in Apromore, and analysed 500+ survey responses in Power BI to compare respondent groups.</p></div>
+        <div><h5><i>R</i>Result</h5><p>The TO-BE process contributed to a 30% increase in volunteers onboarded within 3 days. Leadership adopted my recommendations and formalised them into an organisational policy.</p></div>
+      </div>
+      <div class="flow">
+        <div class="flow-label">Delivery path</div>
+        <div class="steps"><span>Workshops</span><em>→</em><span>BRD &amp; FRD</span><em>→</em><span>AS-IS map (Apromore)</span><em>→</em><span>Survey analysis (Power BI)</span><em>→</em><span>TO-BE design</span><em>→</em><span>Policy adopted</span></div>
+        <div class="flow-label" style="margin-top:24px">Typical onboarding time</div>
+        <div class="ba"><span class="lbl">Before</span><div class="track"><div class="bar" style="width:100%;background:#a87420"></div></div><span class="val">~7 days</span></div>
+        <div class="ba"><span class="lbl">After</span><div class="track"><div class="bar" style="width:42.8%;background:#2f63b0"></div></div><span class="val">≤3 days</span></div>
+      </div>
+    </article>
+
+    <div class="cases-mini">
+      <article class="case reveal">
+        <div class="kicker">Beyond Bank · 2026</div>
+        <h3>A standard reference for broker onboarding</h3>
+        <div class="big">30 <small>days of current-state analysis</small></div>
+        <div class="pax">
+          <div><h5><i>P</i>Problem</h5><p>The 10-day broker onboarding process had gaps, including missing questions.</p></div>
+          <div><h5><i>A</i>Approach</h5><p>Analysed the current state through document review, observation and team input.</p></div>
+          <div><h5><i>R</i>Result</h5><p>A checklist and process document now used as the standard reference across onboarding.</p></div>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div class="kicker">Beyond Bank · 2025–26</div>
+        <h3>Diagnosing blocked customer payments</h3>
+        <div class="big">18 <small>colleagues adopted the guide</small></div>
+        <div class="pax">
+          <div><h5><i>P</i>Problem</h5><p>Blocked payments were hard to identify, slowing customer resolution.</p></div>
+          <div><h5><i>A</i>Approach</h5><p>Investigated the root cause and defined clear diagnostic steps.</p></div>
+          <div><h5><i>R</i>Result</h5><p>Co-developed a step-by-step guide, adopted by the full team of 18.</p></div>
+        </div>
+      </article>
+      <article class="case reveal">
+        <div class="kicker">Austrade SAIEP · Jun 2025</div>
+        <h3>Compliance analytics for a WA government client</h3>
+        <div class="big">1 <small>month, delivered on time</small></div>
+        <div class="pax">
+          <div><h5><i>P</i>Problem</h5><p>An early-education client needed compliance insight from raw data.</p></div>
+          <div><h5><i>A</i>Approach</h5><p>Defined scope, assumptions and benefits, elicited requirements with BABOK techniques, and built SQL analytics in a six-person Agile team.</p></div>
+          <div><h5><i>R</i>Result</h5><p>Actionable findings delivered on schedule, with the plan managed in MS Project and status reported to the client.</p></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="dashboard" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">04 · Dashboard</div>
+      <div><h2>Data project: <em>WA school growth.</em></h2><p>An interactive version of my Power BI analysis. Hover over the chart to see each year's values.</p></div>
+    </div>
+    <div class="dash reveal">
+      <div class="dash-head">
+        <div><h3>Is WA's school network keeping pace with enrolments?</h3><div class="src">Source: WA Department of Education, Semester 1 school census, 2020–2026</div></div>
+        <div><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Star schema</span></div>
+      </div>
+      <div class="tiles">
+        <div><small>Students 2026</small><b>507,395</b><span>+8.6% since 2020</span></div>
+        <div><small>Schools 2026</small><b>1,150</b><span>+1.9% since 2020</span></div>
+        <div><small>Students per school</small><b>441</b><span>up from 414</span></div>
+        <div><small>Non-govt share</small><b>34.7%</b><span>+2.6 pts since 2020</span></div>
+      </div>
+      <div class="ctrl">
+        <div class="seg" role="tablist" aria-label="Chart view">
+          <button class="on" data-view="cap">Students vs schools</button>
+          <button data-view="geo">Metro vs country</button>
+          <button data-view="sec">Public vs non-govt</button>
+        </div>
+        <button class="tbl-btn" id="tblBtn" aria-expanded="false">Show data table</button>
+      </div>
+      <div class="chart-area">
+        <div class="chart-wrap">
+          <div class="legend" id="legend"></div>
+          <svg id="chart" viewBox="0 0 720 340" role="img" aria-label="Indexed growth chart"></svg>
+          <div class="tip" id="tip"></div>
+        </div>
+        <div class="insight" id="insight"></div>
+      </div>
+      <div class="dtable" id="dtable"></div>
+      <div class="dash-foot">
+        <p>Indexed so 2020 = 100, which lets measures of very different size share one axis. The DAX measures find the first and latest year from the data, so a 2027 census needs no changes.</p>
+        <a class="gh" href="https://github.com/Renvil19/wa-schooling-growth-powerBI" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>View the Power BI project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="toolkit">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">05 · Toolkit</div>
+      <div><h2>Tools, and <em>where I've used them.</em></h2><p>Evidence instead of skill bars: each tick is a real project or role.</p></div>
+    </div>
+    <div class="matrix reveal">
+      <table>
+        <thead><tr><th>Tool / technique</th><th>Beyond Bank</th><th>EdConnect</th><th>SAIEP</th><th>WA Schools</th><th>Study &amp; certs</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="6">Data &amp; reporting</td></tr>
+          <tr><td>SQL</td><td></td><td></td><td><span class="chk">✓</span></td><td></td><td><span class="chk">✓</span></td></tr>
+          <tr><td>Power BI · DAX · Power Query</td><td></td><td><span class="chk">✓</span></td><td></td><td><span class="chk">✓</span></td><td></td></tr>
+          <tr><td>Excel <small>pivot tables, reconciliation</small></td><td></td><td><span class="chk">✓</span></td><td></td><td></td><td></td></tr>
+          <tr><td>Python</td><td></td><td></td><td></td><td></td><td><span class="chk">✓</span></td></tr>
+          <tr class="grp"><td colspan="6">Process &amp; requirements</td></tr>
+          <tr><td>BRD / FRD</td><td></td><td><span class="chk">✓</span></td><td></td><td></td><td></td></tr>
+          <tr><td>AS-IS / TO-BE mapping <small>BPMN, Apromore</small></td><td></td><td><span class="chk">✓</span></td><td></td><td></td><td><span class="chk">✓</span></td></tr>
+          <tr><td>Visio</td><td></td><td></td><td></td><td></td><td><span class="chk">✓</span></td></tr>
+          <tr><td>Gap &amp; root-cause analysis</td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td></td><td></td><td></td></tr>
+          <tr><td>Process documentation &amp; training</td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td></td><td></td><td></td></tr>
+          <tr class="grp"><td colspan="6">Delivery &amp; domain</td></tr>
+          <tr><td>Scrum / Agile</td><td></td><td><span class="chk">✓</span></td><td><span class="chk">✓</span></td><td></td><td><span class="chk">✓</span></td></tr>
+          <tr><td>MS Project</td><td></td><td></td><td><span class="chk">✓</span></td><td></td><td></td></tr>
+          <tr><td>AML/CTF · KYC/CDD · APRA</td><td><span class="chk">✓</span></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
 <section id="experience" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <div class="num">02 · Experience</div>
+      <div class="num">06 · Experience</div>
       <div>
         <h2>Where I have made <em>a difference.</em></h2>
         <p>Each role framed as the problem, what I did, and the result.</p>
@@ -335,90 +597,14 @@
   </div>
 </section>
 
-<section id="projects">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="num">03 · Projects</div>
-      <div>
-        <h2>Selected <em>work.</em></h2>
-        <p>A featured data project, plus consulting and delivery work from my Master's.</p>
-      </div>
-    </div>
 
-    <article class="feature reveal">
-      <div class="shot"><img src="images/wa-schooling-cover.png" alt="WA Schooling Growth report cover: full-time students by sector, 2020 to 2026, with key growth figures"></div>
-      <div class="feature-body">
-        <div>
-          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data modelling</span>
-          <h3>WA School Enrolment Growth, 2020–2026</h3>
-          <p class="q">Is WA's school network keeping pace with enrolment growth, and where is the pressure building?</p>
-          <p>Using WA Department of Education census data, I validated that every total reconciled, reshaped the data in Power Query, built a star-schema model with shared year and sector dimensions, and wrote DAX measures that detect the first and latest year automatically, so a new census year needs no measure changes.</p>
-          <p>The three-page report covers an executive overview, growth drivers (by stage and metro vs country), and a 2026 snapshot of all 1,150 schools.</p>
-          <a class="gh" href="https://github.com/Renvil19/wa-schooling-growth-powerBI" target="_blank" rel="noopener">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            View project on GitHub
-          </a>
-        </div>
-        <div>
-          <table>
-            <thead><tr><th>Measure</th><th class="n">2020</th><th class="n">2026</th><th class="n">Change</th></tr></thead>
-            <tbody>
-              <tr><td>Students</td><td class="n">467,317</td><td class="n">507,395</td><td class="n up">+8.6%</td></tr>
-              <tr><td>Schools</td><td class="n">1,129</td><td class="n">1,150</td><td class="n up">+1.9%</td></tr>
-              <tr><td>Metro students</td><td class="n">370,536</td><td class="n">408,392</td><td class="n up">+10.2%</td></tr>
-              <tr><td>Country students</td><td class="n">96,781</td><td class="n">99,003</td><td class="n up">+2.3%</td></tr>
-              <tr><td>Non-govt share</td><td class="n">32.1%</td><td class="n">34.7%</td><td class="n up">+2.6 pts</td></tr>
-            </tbody>
-          </table>
-          <ul class="findings">
-            <li><b>Enrolments are outgrowing schools:</b> the average school now serves 441 students, up from 414.</li>
-            <li><b>Growth is concentrated in Perth;</b> country WA added no new schools.</li>
-            <li><b>Non-government enrolments grew 17.5%</b> versus 4.3% for public schools.</li>
-            <li><b>Years 11–12 grew 18.9%,</b> the fastest-growing stage.</li>
-          </ul>
-        </div>
-      </div>
-    </article>
 
-    <div class="projects">
-      <div class="card reveal">
-        <div class="kicker">Austrade SAIEP · Jun 2025</div>
-        <h4>Compliance analytics for a WA government early-education client</h4>
-        <p>The client needed compliance insight from raw data. I defined the business problem, scope, assumptions, constraints and expected benefits, and elicited requirements using BABOK techniques.</p>
-        <p>Delivered SQL-based compliance analytics within a six-member Agile team. I built the schedule in MS Project, ran agendas, recorded decisions and reported status to the client, delivering <b>on time</b> within the one-month engagement.</p>
-        <span class="tag">SQL</span><span class="tag">BABOK</span><span class="tag">MS Project</span>
-      </div>
-      <div class="card reveal">
-        <div class="kicker">Team project · Scrum Master</div>
-        <h4>Social media strategy for a tutoring business</h4>
-        <p>As Scrum Master for Task Force 6 (Your Study Buddy), I ran sprint planning and the team's Scrum ceremonies, tracking actions through to delivery of a complete social media strategy for the client.</p>
-        <span class="tag">Scrum</span><span class="tag">Sprint planning</span><span class="tag">Facilitation</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="skills" class="alt">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="num">04 · Skills</div>
-      <div><h2>What I bring <em>to a team.</em></h2></div>
-    </div>
-    <div class="skills">
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h6M9 3h6a1 1 0 011 1v1H8V4a1 1 0 011-1zM8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-2M8 12h8M8 16h5"/></svg></div><h4>Requirements</h4><p>Elicitation through interviews, workshops, document analysis and observation; BRDs and FRDs; user stories and acceptance criteria; business rules and data mapping; gap analysis; MoSCoW prioritisation.</p></div>
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h5v4H4zM15 14h5v4h-5zM9 8h3a2 2 0 012 2v4a2 2 0 002 2"/></svg></div><h4>Process</h4><p>AS-IS and TO-BE maps in BPMN and swimlane format using Apromore and Visio; customer journey and value stream mapping; root-cause analysis.</p></div>
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/></svg></div><h4>Delivery</h4><p>Sprint planning and stand-ups; backlog refinement; dependency management; action, issue and exception tracking; status reporting; MS Project; Agile and Waterfall.</p></div>
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h4>Data &amp; tools</h4><p>SQL, Power BI (DAX, Power Query), Excel (pivot tables, reconciliation), Python, MS Project, Visio, Apromore.</p></div>
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1a4 4 0 00-4-4H6a4 4 0 00-4 4v1M9 10a3 3 0 100-6 3 3 0 000 6zM22 19v-1a4 4 0 00-3-3.9M16 4.1a3 3 0 010 5.8"/></svg></div><h4>Stakeholders</h4><p>Facilitating workshops and interviews; presenting recommendations to leadership; writing process and training documentation for non-technical audiences.</p></div>
-      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z M9 12l2 2 4-4"/></svg></div><h4>Domain</h4><p>Regulated financial services; AML/CTF, KYC/CDD and APRA compliance; non-profit operations; government client delivery.</p></div>
-    </div>
-  </div>
-</section>
 
 <section id="education">
   <div class="wrap">
     <div class="sec-head">
-      <div class="num">05 · Education</div>
+      <div class="num">07 · Education</div>
       <div><h2>Education &amp; <em>certifications.</em></h2></div>
     </div>
     <div class="body edu">
@@ -449,7 +635,7 @@
 <section id="contact" class="contact">
   <div class="wrap">
     <div class="sec-head">
-      <div class="num">06 · Contact</div>
+      <div class="num">08 · Contact</div>
       <div>
         <h2>Let's talk about your <em>next project.</em></h2>
         <p>I'm open to Business Analyst, process improvement and data analyst roles in Perth, or interstate for the right opportunity.</p>
@@ -473,6 +659,70 @@
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
   var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
   els.forEach(function(e){io.observe(e)});
+})();
+</script>
+<script>
+(function(){
+  var raw=[[2020,"Public",818,317368,244897,72471],[2020,"Non-government",311,149949,125639,24310],[2021,"Public",822,319574,247984,71590],[2021,"Non-government",312,154154,129094,25060],[2022,"Public",826,318332,247627,70705],[2022,"Non-government",313,157864,131953,25911],[2023,"Public",830,322294,251771,70523],[2023,"Non-government",314,162556,135985,26571],[2024,"Public",831,326286,256025,70261],[2024,"Non-government",315,167840,140550,27290],[2025,"Public",833,330939,260257,70682],[2025,"Non-government",317,172256,144214,28042],[2026,"Public",833,331153,260640,70513],[2026,"Non-government",317,176242,147752,28490]];
+  var years=[2020,2021,2022,2023,2024,2025,2026];
+  function agg(fn){return years.map(function(y){return raw.filter(function(r){return r[0]===y}).reduce(function(a,r){return a+fn(r)},0)})}
+  var C1="#2f63b0",C2="#a87420";
+  var views={
+    cap:{s:[{n:"Students",c:C1,v:agg(function(r){return r[3]})},{n:"Schools",c:C2,v:agg(function(r){return r[2]})}],
+      ins:'<h5>Insight</h5><p><b>Enrolments grew 4.5× faster than schools.</b> Students rose 8.6% while schools rose only 1.9%, so the average school now serves 441 students, up from 414.</p><p>Country WA added no schools at all over the period (410 in both years).</p>'},
+    geo:{s:[{n:"Metro students",c:C1,v:agg(function(r){return r[4]})},{n:"Country students",c:C2,v:agg(function(r){return r[5]})}],
+      ins:'<h5>Insight</h5><p><b>Growth is concentrated in Perth.</b> Metro enrolments grew 10.2% versus 2.3% in country WA.</p><p>Metro’s share of all students rose from 79.3% to 80.5%, and public country enrolments fell 2.7%.</p>'},
+    sec:{s:[{n:"Public",c:C1,v:raw.filter(function(r){return r[1]==="Public"}).map(function(r){return r[3]})},{n:"Non-government",c:C2,v:raw.filter(function(r){return r[1]!=="Public"}).map(function(r){return r[3]})}],
+      ins:'<h5>Insight</h5><p><b>Families are shifting to non-government schools.</b> Non-government enrolments grew 17.5% versus 4.3% for public schools.</p><p>With only 6 new non-government schools, their average size jumped from 482 to 556 students.</p>'}
+  };
+  var svg=document.getElementById('chart'),tip=document.getElementById('tip'),wrap=svg.parentNode,NS="http://www.w3.org/2000/svg";
+  var W=720,H=340,m={l:46,r:118,t:18,b:36},cur='cap';
+  function size(){var nw=wrap.clientWidth<560;W=nw?400:720;H=nw?330:340;m.r=nw?92:118;m.l=nw?38:46;svg.setAttribute('viewBox','0 0 '+W+' '+H);}
+  function el(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+  function fmt(n){return n.toLocaleString('en-AU')}
+  function draw(){
+    size();var v=views[cur];svg.innerHTML='';
+    var S=v.s.map(function(x){return {n:x.n,c:x.c,v:x.v,i:x.v.map(function(d){return d/x.v[0]*100})}});
+    var all=[].concat.apply([],S.map(function(x){return x.i}));
+    var lo=Math.floor(Math.min.apply(0,all)/5)*5, hi=Math.ceil(Math.max.apply(0,all)/5)*5; if(lo>98)lo=95; if(hi-lo<10)hi=lo+10;
+    var X=function(i){return m.l+i*(W-m.l-m.r)/(years.length-1)}, Y=function(d){return m.t+(hi-d)*(H-m.t-m.b)/(hi-lo)};
+    for(var g=lo;g<=hi;g+=5){el('line',{x1:m.l,x2:W-m.r,y1:Y(g),y2:Y(g),stroke:g===100?'#c9c4b8':'#ece9e2','stroke-width':1,'stroke-dasharray':g===100?'4 4':''});
+      var t=el('text',{x:m.l-10,y:Y(g)+4,'text-anchor':'end','font-size':11.5,fill:'#6b7686'});t.textContent=g;}
+    years.forEach(function(y,i){var t=el('text',{x:X(i),y:H-12,'text-anchor':'middle','font-size':11.5,fill:'#6b7686'});t.textContent=y});
+    var yl=el('text',{x:m.l-10,y:m.t-6,'text-anchor':'end','font-size':10.5,fill:'#6b7686'});yl.textContent='Index';
+    // label positions, avoid collision
+    var ends=S.map(function(x){return Y(x.i[x.i.length-1])});
+    if(Math.abs(ends[0]-ends[1])<30){var mid=(ends[0]+ends[1])/2,up=ends[0]<ends[1]?0:1;ends[up]=mid-15;ends[1-up]=mid+15}
+    S.forEach(function(x,k){
+      el('path',{d:x.i.map(function(d,i){return(i?'L':'M')+X(i)+' '+Y(d)}).join(''),fill:'none',stroke:x.c,'stroke-width':2.25,'stroke-linejoin':'round','stroke-linecap':'round'});
+      var li=x.i.length-1; el('circle',{cx:X(li),cy:Y(x.i[li]),r:4,fill:x.c,stroke:'#fff','stroke-width':2});
+      var t=el('text',{x:X(li)+10,y:ends[k]+4,'font-size':12.5,'font-weight':600,fill:'#0f1b2d'});t.textContent=x.n;
+      var t2=el('text',{x:X(li)+10,y:ends[k]+19,'font-size':11.5,fill:'#3a4659'});var ch=x.i[li]-100;t2.textContent=(ch>=0?'+':'')+ch.toFixed(1)+'%';
+    });
+    var cross=el('line',{x1:0,x2:0,y1:m.t,y2:H-m.b,stroke:'#0f1b2d','stroke-opacity':.25,'stroke-width':1,visibility:'hidden'});
+    var dots=S.map(function(x){return el('circle',{r:5,fill:x.c,stroke:'#fff','stroke-width':2,visibility:'hidden'})});
+    var hit=el('rect',{x:m.l-20,y:m.t,width:W-m.l-m.r+40,height:H-m.t-m.b,fill:'transparent'});
+    function move(ev){
+      var r=svg.getBoundingClientRect(),px=(ev.clientX-r.left)*W/r.width;
+      var i=Math.max(0,Math.min(years.length-1,Math.round((px-m.l)/((W-m.l-m.r)/(years.length-1)))));
+      cross.setAttribute('x1',X(i));cross.setAttribute('x2',X(i));cross.setAttribute('visibility','visible');
+      S.forEach(function(x,k){dots[k].setAttribute('cx',X(i));dots[k].setAttribute('cy',Y(x.i[i]));dots[k].setAttribute('visibility','visible')});
+      tip.innerHTML='<b>'+years[i]+'</b>'+S.map(function(x){return '<div class="r"><span><span class="sw" style="background:'+x.c+'"></span>'+x.n+'</span><span>'+fmt(x.v[i])+'</span></div>'}).join('')+'<div class="r" style="opacity:.65;margin-top:4px"><span>Index (2020=100)</span><span>'+S.map(function(x){return x.i[i].toFixed(1)}).join(' / ')+'</span></div>';
+      tip.style.opacity=1;
+      var wr=wrap.getBoundingClientRect(),sx=r.left-wr.left+X(i)*r.width/W,tw=tip.offsetWidth;
+      tip.style.left=(sx+14+tw>wr.width?sx-14-tw:sx+14)+'px';tip.style.top=(r.top-wr.top+20)+'px';
+    }
+    function out(){cross.setAttribute('visibility','hidden');dots.forEach(function(d){d.setAttribute('visibility','hidden')});tip.style.opacity=0}
+    hit.addEventListener('pointermove',move);hit.addEventListener('pointerdown',move);hit.addEventListener('pointerleave',out);
+    document.getElementById('legend').innerHTML=S.map(function(x){return '<span><i style="background:'+x.c+'"></i>'+x.n+'</span>'}).join('');
+    document.getElementById('insight').innerHTML=v.ins;
+    document.getElementById('dtable').innerHTML='<table><thead><tr><th>Year</th>'+S.map(function(x){return '<th class="n">'+x.n+'</th><th class="n">Index</th>'}).join('')+'</tr></thead><tbody>'+years.map(function(y,i){return '<tr><td>'+y+'</td>'+S.map(function(x){return '<td class="n">'+fmt(x.v[i])+'</td><td class="n">'+x.i[i].toFixed(1)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table>';
+  }
+  document.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.seg button').forEach(function(o){o.classList.toggle('on',o===b)});cur=b.getAttribute('data-view');draw();})});
+  var tb=document.getElementById('tblBtn');tb.addEventListener('click',function(){var d=document.getElementById('dtable');var on=d.classList.toggle('show');tb.textContent=on?'Hide data table':'Show data table';tb.setAttribute('aria-expanded',on)});
+  draw();
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(draw,150)});
 })();
 </script>
 </body>
