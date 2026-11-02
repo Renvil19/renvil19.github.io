@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renvil Furtado | Business Analyst Portfolio</title>
+<meta name="description" content="Renvil Furtado, Business Analyst based in Perth, WA. Requirements, process mapping, Agile delivery and data analytics.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0b1628; --navy-2:#13233d; --ink:#0f1b2d; --ink-2:#3a4659; --muted:#6b7686; --line:#e6e3dc;
+    --paper:#faf8f4; --card:#ffffff; --accent:#1f4e8c; --accent-soft:#e9eef6; --gold:#c8963e; --gold-2:#e6c27a;
+    --serif:"Newsreader", Georgia, serif; --sans:"Inter", system-ui, -apple-system, sans-serif;
+    --shadow:0 1px 2px rgba(15,27,45,.04), 0 12px 32px -12px rgba(15,27,45,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:20;transition:background .3s, border-color .3s, box-shadow .3s;border-bottom:1px solid transparent}
+  nav.solid{background:rgba(250,248,244,.9);backdrop-filter:blur(12px);border-color:var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{font-family:var(--serif);font-size:21px;font-weight:600;color:#fff;letter-spacing:-.01em;transition:color .3s}
+  .brand i{color:var(--gold-2);font-style:normal}
+  nav ul{display:flex;gap:30px;list-style:none}
+  nav ul a{color:rgba(255,255,255,.78);font-size:14px;font-weight:500;transition:color .2s}
+  nav ul a:hover{color:#fff}
+  nav.solid .brand{color:var(--ink)} nav.solid .brand i{color:var(--gold)}
+  nav.solid ul a{color:var(--ink-2)} nav.solid ul a:hover{color:var(--accent)}
+
+  /* hero */
+  header.hero{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding:150px 0 120px}
+  header.hero::before{content:"";position:absolute;inset:0;background:
+     radial-gradient(800px 500px at 85% 20%, rgba(31,78,140,.55), transparent 60%),
+     radial-gradient(600px 420px at 10% 100%, rgba(200,150,62,.22), transparent 60%);}
+  header.hero::after{content:"";position:absolute;inset:0;opacity:.07;background-image:
+     linear-gradient(rgba(255,255,255,.6) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.6) 1px, transparent 1px);
+     background-size:56px 56px;mask-image:radial-gradient(ellipse at 70% 40%, #000 20%, transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%, #000 20%, transparent 70%)}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr 1fr;gap:64px;align-items:center}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-2);font-weight:600;margin-bottom:26px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold-2)}
+  h1{font-family:var(--serif);font-weight:400;font-size:clamp(42px,5.6vw,72px);line-height:1.04;letter-spacing:-.02em}
+  h1 em{font-style:italic;background:linear-gradient(90deg,var(--gold-2),#f3dcaa);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-size:18.5px;color:rgba(255,255,255,.74);max-width:56ch;margin-top:26px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+  .chips span{font-size:13px;color:rgba(255,255,255,.88);border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);padding:6px 13px;border-radius:999px}
+  .cta{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:999px;font-size:14.5px;font-weight:500;transition:transform .2s, box-shadow .2s, background .2s}
+  .btn.primary{background:linear-gradient(135deg,var(--gold-2),var(--gold));color:var(--navy);box-shadow:0 10px 30px -10px rgba(200,150,62,.7)}
+  .btn.ghost{color:#fff;border:1px solid rgba(255,255,255,.3)}
+  .btn:hover{transform:translateY(-2px)} .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+  /* portrait */
+  .portrait-wrap{position:relative;justify-self:center;width:min(380px,100%)}
+  .portrait{position:relative;aspect-ratio:4/5;border-radius:200px 200px 24px 24px;overflow:hidden;
+     background:linear-gradient(160deg,#21385e,#0e1c33);border:1px solid rgba(255,255,255,.14);box-shadow:0 40px 80px -30px rgba(0,0,0,.6)}
+  .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .mono{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-size:120px;font-weight:400;color:rgba(230,194,122,.85);letter-spacing:-.04em}
+  .ring{position:absolute;inset:-14px;border-radius:214px 214px 34px 34px;border:1px solid rgba(230,194,122,.45);pointer-events:none}
+  .badge{position:absolute;z-index:2;background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:12px 16px;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);font-size:13px;line-height:1.35;animation:float 6s ease-in-out infinite}
+  .badge b{display:block;font-family:var(--serif);font-size:24px;font-weight:500;color:var(--accent);line-height:1.1}
+  .badge.b1{left:-34px;bottom:70px}
+  .badge.b2{right:-26px;top:58px;animation-delay:-3s;display:flex;align-items:center;gap:10px}
+  .dot{width:9px;height:9px;border-radius:50%;background:#2fb67c;box-shadow:0 0 0 4px rgba(47,182,124,.2)}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+  /* impact */
+  .impact-wrap{position:relative;z-index:2;margin-top:-56px}
+  .impact{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
+  .impact div{padding:32px 30px}
+  .impact div+div{border-left:1px solid var(--line)}
+  .impact b{display:block;font-family:var(--serif);font-size:46px;font-weight:400;line-height:1;color:var(--ink)}
+  .impact b span{color:var(--gold)}
+  .impact p{font-size:13.5px;color:var(--muted);margin-top:10px}
+
+  /* sections */
+  section{padding:110px 0}
+  .sec-head{display:grid;grid-template-columns:240px 1fr;gap:40px;margin-bottom:52px}
+  .sec-head .num{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;padding-top:14px;display:flex;align-items:center;gap:10px}
+  .sec-head .num::after{content:"";flex:0 0 36px;height:1px;background:var(--gold);opacity:.6}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(32px,3.8vw,46px);line-height:1.12;letter-spacing:-.015em}
+  h2 em{font-style:italic;color:var(--accent)}
+  .sec-head p{color:var(--ink-2);margin-top:14px;max-width:60ch}
+  .body{margin-left:280px}
+  .alt{background:#f3efe7}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:56px}
+  .about-grid p{color:var(--ink-2);margin-bottom:16px;font-size:16.5px}
+  .about-grid p:first-child::first-letter{font-family:var(--serif);float:left;font-size:64px;line-height:.9;padding:6px 10px 0 0;color:var(--gold)}
+  .facts{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 30px;box-shadow:var(--shadow)}
+  .facts dt{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-top:18px}
+  .facts dt:first-child{margin-top:0}
+  .facts dd{font-size:15px;color:var(--ink);margin-top:3px}
+
+  /* timeline */
+  .timeline{position:relative;margin-left:280px}
+  .timeline::before{content:"";position:absolute;left:-40px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),var(--line))}
+  .role{position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:30px 34px;margin-bottom:22px;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s}
+  .role:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(15,27,45,.04), 0 22px 44px -16px rgba(15,27,45,.2)}
+  .role::before{content:"";position:absolute;left:-46px;top:36px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:2px solid var(--gold)}
+  .role.current::before{background:var(--gold);box-shadow:0 0 0 6px rgba(200,150,62,.18)}
+  .role .top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+  .role h3{font-family:var(--serif);font-size:25px;font-weight:500;line-height:1.25}
+  .role .when{font-size:13px;color:var(--muted);font-weight:500;background:#f3efe7;padding:4px 12px;border-radius:999px;white-space:nowrap}
+  .role .org{font-size:14.5px;color:var(--accent);font-weight:500;margin-top:2px}
+  .role ul{list-style:none;margin-top:14px}
+  .role li{position:relative;padding-left:22px;margin-top:9px;color:var(--ink-2);font-size:15.3px}
+  .role li::before{content:"";position:absolute;left:0;top:10px;width:10px;height:1.5px;background:var(--gold)}
+  .role li b{color:var(--ink);font-weight:600}
+
+  /* featured project */
+  .feature{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+  .feature .shot{background:var(--navy);padding:28px 28px 0}
+  .feature img{display:block;width:100%;height:auto;border-radius:12px 12px 0 0;box-shadow:0 -10px 40px -10px rgba(0,0,0,.5)}
+  .feature-body{padding:40px 44px 44px;display:grid;grid-template-columns:1.2fr 1fr;gap:52px}
+  .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:5px 11px;border-radius:999px;margin:0 6px 6px 0}
+  .feature h3{font-family:var(--serif);font-size:31px;font-weight:500;line-height:1.18;margin:12px 0 10px}
+  .feature p{color:var(--ink-2);font-size:15.5px;margin-bottom:12px}
+  .q{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink);border-left:2px solid var(--gold);padding-left:18px;margin:18px 0 20px;line-height:1.45}
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  th,td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line)}
+  th{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+  td.up{color:var(--accent);font-weight:600}
+  .findings{list-style:none;margin-top:18px}
+  .findings li{font-size:14.5px;color:var(--ink-2);padding:9px 0;border-bottom:1px dashed var(--line)}
+  .findings li b{color:var(--ink)}
+  .gh{display:inline-flex;align-items:center;gap:9px;margin-top:20px;font-weight:600;font-size:14.5px;color:#fff;background:var(--ink);padding:11px 20px;border-radius:999px;transition:transform .2s}
+  .gh:hover{transform:translateY(-2px)}
+  .gh svg{width:17px;height:17px}
+
+  .projects{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 32px 34px;box-shadow:var(--shadow);transition:transform .25s, box-shadow .25s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;left:0;top:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:0;transition:opacity .25s}
+  .projects .card:hover{transform:translateY(-4px)} .projects .card:hover::before{opacity:1}
+  .card .kicker{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .card h4{font-family:var(--serif);font-size:23px;font-weight:500;margin:8px 0 12px;line-height:1.25}
+  .card p{font-size:15px;color:var(--ink-2);margin-bottom:10px}
+
+  /* skills */
+  .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .skill{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow);transition:transform .25s}
+  .skill:hover{transform:translateY(-3px)}
+  .ico{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);margin-bottom:16px}
+  .ico svg{width:21px;height:21px}
+  .skill h4{font-family:var(--serif);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px}
+  .skill p{font-size:14.5px;color:var(--ink-2)}
+
+  /* education */
+  .edu{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .edu .card h4{font-size:22px}
+  .hd{display:inline-block;margin-top:6px;font-size:12px;font-weight:600;color:var(--gold);border:1px solid var(--gold);padding:3px 10px;border-radius:999px}
+  .certs{list-style:none;margin-top:6px}
+  .certs li{font-size:14.5px;color:var(--ink);padding:11px 0 11px 30px;border-bottom:1px solid var(--line);position:relative}
+  .certs li::before{content:"✓";position:absolute;left:0;top:11px;width:20px;height:20px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:11px;display:grid;place-items:center;font-weight:700}
+  .certs li:last-child{border-bottom:none}
+  .certs li span{display:block;font-size:12.5px;color:var(--muted)}
+
+  /* contact */
+  .contact{position:relative;overflow:hidden;background:var(--navy);color:#fff;padding-bottom:70px}
+  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(700px 400px at 90% 0%, rgba(31,78,140,.5), transparent 60%),radial-gradient(500px 360px at 0% 100%, rgba(200,150,62,.18), transparent 60%)}
+  .contact .wrap{position:relative}
+  .contact h2{color:#fff;max-width:18ch}
+  .contact h2 em{color:var(--gold-2)}
+  .contact .num{color:var(--gold-2)} .contact .num::after{background:var(--gold-2)}
+  .contact .sec-head p{color:rgba(255,255,255,.7)}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-left:280px}
+  .contact-grid a{display:block;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:16px;padding:22px 24px;transition:background .2s, transform .2s, border-color .2s}
+  .contact-grid a:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);border-color:rgba(230,194,122,.5)}
+  .contact-grid small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
+  .contact-grid span{display:block;color:#fff;font-size:15.5px;margin-top:6px;word-break:break-word}
+  footer{background:var(--navy);color:rgba(255,255,255,.45);font-size:13px;padding:0 0 40px}
+  footer .wrap{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.badge{animation:none}}
+
+  @media (max-width:960px){
+    nav ul{display:none}
+    header.hero{padding:120px 0 110px}
+    .hero-grid{grid-template-columns:1fr;gap:56px}
+    .portrait-wrap{width:min(300px,80%)}
+    .badge.b1{left:-18px} .badge.b2{right:-14px}
+    .impact{grid-template-columns:1fr 1fr}
+    .impact div:nth-child(3){border-left:none}
+    .impact div:nth-child(n+3){border-top:1px solid var(--line)}
+    .sec-head{grid-template-columns:1fr;gap:10px}
+    .body,.contact-grid{margin-left:0}
+    .timeline{margin-left:22px} .timeline::before{left:-22px} .role::before{left:-28px}
+    .role{padding:24px}
+    .about-grid,.feature-body,.projects,.edu{grid-template-columns:1fr;gap:28px}
+    .skills,.contact-grid{grid-template-columns:1fr}
+    .feature-body{padding:28px}
+    section{padding:76px 0}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Renvil Furtado<i>.</i></a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Business Analyst · Perth, WA</div>
+      <h1>Turning messy processes into <em>clear, workable</em> change.</h1>
+      <p class="lede">I elicit requirements, map current and future-state processes, and use data to show what should change and why. Master of Business Analytics (UWA), now working in regulated banking at Beyond Bank Australia.</p>
+      <div class="chips"><span>Requirements · BRD/FRD</span><span>BPMN process mapping</span><span>Agile delivery</span><span>SQL · Power BI · Python</span></div>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View my work →</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/renvilfurtado-6b419b238" target="_blank" rel="noopener">LinkedIn profile</a>
+      </div>
+    </div>
+    <div class="portrait-wrap">
+      <div class="ring"></div>
+      <div class="portrait">
+        <span class="mono">RF</span>
+        <img src="images/profile.jpg" alt="Portrait of Renvil Furtado" onerror="this.remove()">
+      </div>
+      <div class="badge b1"><b>30%</b>more volunteers<br>onboarded in 3 days</div>
+      <div class="badge b2"><span class="dot"></span>Open to BA roles</div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap impact-wrap reveal">
+  <div class="impact">
+    <div><b>30<span>%</span></b><p>more volunteers onboarded within 3 days at EdConnect</p></div>
+    <div><b>18</b><p>colleagues adopted my payments diagnostic guide</p></div>
+    <div><b>500<span>+</span></b><p>survey responses analysed in Power BI</p></div>
+    <div><b>25–30</b><p>broker onboarding files reviewed for compliance each day</p></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">01 · About</div>
+      <div><h2>Analyst by training, <em>problem-solver</em> by habit.</h2></div>
+    </div>
+    <div class="body about-grid">
+      <div>
+        <p>I like finding the step in a process where things quietly go wrong, then fixing it in a way the team will actually use. That has meant mapping a volunteer onboarding process in Apromore to find where a week was being lost, writing a diagnostic guide for blocked payments that a whole team now relies on, and building a checklist that has become the standard reference for broker onboarding.</p>
+        <p>My work combines classic business analysis (interviews, workshops, BRDs, FRDs, user stories, AS-IS and TO-BE maps) with hands-on data skills in SQL, Power BI and Excel. I have supported Scrum delivery through sprint planning, stand-ups, dependency tracking and status reporting to clients and leadership.</p>
+        <p>I am looking for Business Analyst roles where I can own requirements and process improvement end to end.</p>
+      </div>
+      <dl class="facts">
+        <dt>Currently</dt><dd>Broker Onboarding Consultant, Beyond Bank Australia</dd>
+        <dt>Education</dt><dd>Master of Business Analytics, University of Western Australia</dd>
+        <dt>Domain</dt><dd>Regulated financial services: AML/CTF, KYC/CDD, APRA</dd>
+        <dt>Based in</dt><dd>Perth, WA · open to relocation (Melbourne, Geelong, Sydney)</dd>
+        <dt>Work rights</dt><dd>Full working rights in Australia</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">02 · Experience</div>
+      <div>
+        <h2>Where I have made <em>a difference.</em></h2>
+        <p>Each role framed as the problem, what I did, and the result.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+    <div class="role current reveal">
+      <div class="top"><h3>Broker Onboarding Consultant</h3><span class="when">Aug 2026 – Present</span></div>
+        
+        <div class="org">Beyond Bank Australia</div>
+        <ul>
+          <li>Found gaps, including missing questions, in the 10-day broker onboarding process. Over 30 days I analysed the current state through document review, observation and team input, then <b>built a checklist and process document now used as the standard reference</b> across onboarding.</li>
+          <li>Process <b>25–30 onboarding files a day</b> (125–150 a week), clarifying requirements with brokers and clients to resolve documentation gaps and keep applications moving.</li>
+          <li>Check every file against lending policy and AML/CTF, KYC/CDD and APRA requirements in daily banking reviews, flagging and escalating exceptions and compliance risks.</li>
+        </ul>
+          </div>
+    <div class="role reveal">
+      <div class="top"><h3>Customer Relationship Consultant</h3><span class="when">Nov 2025 – Aug 2026</span></div>
+        
+        <div class="org">Beyond Bank Australia</div>
+        <ul>
+          <li>Blocked customer payments were hard to identify. I investigated the root cause, defined the diagnostic steps and co-developed a step-by-step guide, <b>adopted by the full team of 18</b>.</li>
+          <li>During the Family First Bank merger (March 2026), ran a <b>gap analysis of both banks' processes</b> and turned the differences into documentation and training for colleagues supporting migrated customers.</li>
+          <li>Recognised through the CX Mantra performance program and progressed to B2 classification.</li>
+        </ul>
+          </div>
+    <div class="role reveal">
+      <div class="top"><h3>Data Survey Analyst (Internship)</h3><span class="when">Nov 2024 – May 2025</span></div>
+        
+        <div class="org">EdConnect Australia · non-profit</div>
+        <ul>
+          <li>Volunteer onboarding took about a week. I ran requirements workshops, documented outcomes in a <b>BRD and FRD</b>, and mapped the AS-IS Working With Children Check process in <b>Apromore</b> to pinpoint delays.</li>
+          <li>Analysed <b>500+ survey responses in Power BI</b>, comparing respondent groups, and designed a TO-BE process that contributed to a <b>30% increase in volunteers onboarded within 3 days</b>, down from about 7.</li>
+          <li>Presented recommendations to leadership; they were adopted and <b>formalised into an organisational policy document</b>.</li>
+          <li>Supported Scrum delivery: managed dependencies with the admin team, took minutes and tracked actions at weekly stand-ups, and prepared reports for a grant application.</li>
+        </ul>
+          </div>
+    <div class="role reveal">
+      <div class="top"><h3>Additional experience</h3><span class="when">Sep 2023 – Present</span></div>
+        
+        <ul>
+          <li>Customer service and technology sales (part-time) at Bunnings, Officeworks and Harvey Norman.</li>
+          <li>AI Quality Assurance Evaluator (freelance, remote) at Outlier, Sep 2024 – Jan 2025.</li>
+        </ul>
+          </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">03 · Projects</div>
+      <div>
+        <h2>Selected <em>work.</em></h2>
+        <p>A featured data project, plus consulting and delivery work from my Master's.</p>
+      </div>
+    </div>
+
+    <article class="feature reveal">
+      <div class="shot"><img src="images/wa-schooling-cover.png" alt="WA Schooling Growth report cover: full-time students by sector, 2020 to 2026, with key growth figures"></div>
+      <div class="feature-body">
+        <div>
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Power Query</span><span class="tag">Data modelling</span>
+          <h3>WA School Enrolment Growth, 2020–2026</h3>
+          <p class="q">Is WA's school network keeping pace with enrolment growth, and where is the pressure building?</p>
+          <p>Using WA Department of Education census data, I validated that every total reconciled, reshaped the data in Power Query, built a star-schema model with shared year and sector dimensions, and wrote DAX measures that detect the first and latest year automatically, so a new census year needs no measure changes.</p>
+          <p>The three-page report covers an executive overview, growth drivers (by stage and metro vs country), and a 2026 snapshot of all 1,150 schools.</p>
+          <a class="gh" href="https://github.com/Renvil19/wa-schooling-growth-powerBI" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+            View project on GitHub
+          </a>
+        </div>
+        <div>
+          <table>
+            <thead><tr><th>Measure</th><th class="n">2020</th><th class="n">2026</th><th class="n">Change</th></tr></thead>
+            <tbody>
+              <tr><td>Students</td><td class="n">467,317</td><td class="n">507,395</td><td class="n up">+8.6%</td></tr>
+              <tr><td>Schools</td><td class="n">1,129</td><td class="n">1,150</td><td class="n up">+1.9%</td></tr>
+              <tr><td>Metro students</td><td class="n">370,536</td><td class="n">408,392</td><td class="n up">+10.2%</td></tr>
+              <tr><td>Country students</td><td class="n">96,781</td><td class="n">99,003</td><td class="n up">+2.3%</td></tr>
+              <tr><td>Non-govt share</td><td class="n">32.1%</td><td class="n">34.7%</td><td class="n up">+2.6 pts</td></tr>
+            </tbody>
+          </table>
+          <ul class="findings">
+            <li><b>Enrolments are outgrowing schools:</b> the average school now serves 441 students, up from 414.</li>
+            <li><b>Growth is concentrated in Perth;</b> country WA added no new schools.</li>
+            <li><b>Non-government enrolments grew 17.5%</b> versus 4.3% for public schools.</li>
+            <li><b>Years 11–12 grew 18.9%,</b> the fastest-growing stage.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <div class="projects">
+      <div class="card reveal">
+        <div class="kicker">Austrade SAIEP · Jun 2025</div>
+        <h4>Compliance analytics for a WA government early-education client</h4>
+        <p>The client needed compliance insight from raw data. I defined the business problem, scope, assumptions, constraints and expected benefits, and elicited requirements using BABOK techniques.</p>
+        <p>Delivered SQL-based compliance analytics within a six-member Agile team. I built the schedule in MS Project, ran agendas, recorded decisions and reported status to the client, delivering <b>on time</b> within the one-month engagement.</p>
+        <span class="tag">SQL</span><span class="tag">BABOK</span><span class="tag">MS Project</span>
+      </div>
+      <div class="card reveal">
+        <div class="kicker">Team project · Scrum Master</div>
+        <h4>Social media strategy for a tutoring business</h4>
+        <p>As Scrum Master for Task Force 6 (Your Study Buddy), I ran sprint planning and the team's Scrum ceremonies, tracking actions through to delivery of a complete social media strategy for the client.</p>
+        <span class="tag">Scrum</span><span class="tag">Sprint planning</span><span class="tag">Facilitation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">04 · Skills</div>
+      <div><h2>What I bring <em>to a team.</em></h2></div>
+    </div>
+    <div class="skills">
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5h6M9 3h6a1 1 0 011 1v1H8V4a1 1 0 011-1zM8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-2M8 12h8M8 16h5"/></svg></div><h4>Requirements</h4><p>Elicitation through interviews, workshops, document analysis and observation; BRDs and FRDs; user stories and acceptance criteria; business rules and data mapping; gap analysis; MoSCoW prioritisation.</p></div>
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h5v4H4zM15 14h5v4h-5zM9 8h3a2 2 0 012 2v4a2 2 0 002 2"/></svg></div><h4>Process</h4><p>AS-IS and TO-BE maps in BPMN and swimlane format using Apromore and Visio; customer journey and value stream mapping; root-cause analysis.</p></div>
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/></svg></div><h4>Delivery</h4><p>Sprint planning and stand-ups; backlog refinement; dependency management; action, issue and exception tracking; status reporting; MS Project; Agile and Waterfall.</p></div>
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h4>Data &amp; tools</h4><p>SQL, Power BI (DAX, Power Query), Excel (pivot tables, reconciliation), Python, MS Project, Visio, Apromore.</p></div>
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 19v-1a4 4 0 00-4-4H6a4 4 0 00-4 4v1M9 10a3 3 0 100-6 3 3 0 000 6zM22 19v-1a4 4 0 00-3-3.9M16 4.1a3 3 0 010 5.8"/></svg></div><h4>Stakeholders</h4><p>Facilitating workshops and interviews; presenting recommendations to leadership; writing process and training documentation for non-technical audiences.</p></div>
+      <div class="skill reveal"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z M9 12l2 2 4-4"/></svg></div><h4>Domain</h4><p>Regulated financial services; AML/CTF, KYC/CDD and APRA compliance; non-profit operations; government client delivery.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">05 · Education</div>
+      <div><h2>Education &amp; <em>certifications.</em></h2></div>
+    </div>
+    <div class="body edu">
+      <div class="card">
+        <div class="kicker">Jul 2023 – Jul 2025</div>
+        <h4>Master of Business Analytics</h4>
+        <p>University of Western Australia</p><span class="hd">High Distinction · Process Mining</span>
+        <p>Relevant units: Process Mining and Analytics (High Distinction, 92), Applied Project Management, Business Intelligence, Data Storytelling, Big Data in Marketing (Distinction), Supply Chain Analytics.</p>
+        <div class="kicker" style="margin-top:22px">Jan 2020 – Jul 2023</div>
+        <h4>Bachelor of Business Administration</h4>
+        <p>St Aloysius College, Mangaluru, India</p>
+      </div>
+      <div class="card">
+        <div class="kicker">Certifications &amp; training</div>
+        <ul class="certs">
+          <li>Study Australia Industry Experience Program<span>Certificate of Completion · Austrade</span></li>
+          <li>SQL<span>LinkedIn Learning · 2026</span></li>
+          <li>Social Media Marketing<span>Certification</span></li>
+          <li>Applying Agile MoSCoW Prioritization<span>LinkedIn Learning · 2026</span></li>
+          <li>Comparing Agile versus Waterfall Project Management<span>LinkedIn Learning · 2026</span></li>
+          <li>Sales: Analytics-Driven Storytelling<span>LinkedIn Learning · 2026</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="num">06 · Contact</div>
+      <div>
+        <h2>Let's talk about your <em>next project.</em></h2>
+        <p>I'm open to Business Analyst, process improvement and data analyst roles in Perth, or interstate for the right opportunity.</p>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <a href="mailto:frenvil701@gmail.com"><small>Email</small><span>frenvil701@gmail.com</span></a>
+      <a href="https://www.linkedin.com/in/renvilfurtado-6b419b238" target="_blank" rel="noopener"><small>LinkedIn</small><span>in/renvilfurtado →</span></a>
+      <a href="https://github.com/Renvil19" target="_blank" rel="noopener"><small>GitHub</small><span>github.com/Renvil19 →</span></a>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Renvil Furtado</span><span>Perth, Western Australia</span></div></footer>
+
+<script>
+(function(){
+  var nav=document.querySelector('nav');
+  function onScroll(){ nav.classList.toggle('solid', window.scrollY>40); }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
