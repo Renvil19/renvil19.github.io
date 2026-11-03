@@ -113,6 +113,7 @@
   .others{margin-top:16px}
   .others div{display:grid;grid-template-columns:1.3fr 1fr auto;gap:12px;align-items:baseline;padding:11px 0;border-top:1px solid var(--line);font-size:15px}
   .others b{font-weight:600;color:var(--ink)} .others span{color:var(--ink-2);font-size:14.5px} .others em{font-style:normal;color:var(--muted);font-size:13.5px;white-space:nowrap}
+  @media (max-width:560px){.contact-grid{grid-template-columns:1fr !important}}
   @media (max-width:700px){.others div{grid-template-columns:1fr;gap:2px}}
   .role .org{font-size:14.5px;color:var(--accent);font-weight:500;margin-top:2px}
   .role ul{list-style:none;margin-top:14px}
@@ -176,7 +177,7 @@
   .contact h2 em{color:var(--gold-2)}
   .contact .num{color:var(--gold-2)} .contact .num::after{background:var(--gold-2)}
   .contact .sec-head p{color:rgba(255,255,255,.7)}
-  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-left:280px}
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-left:280px}
   .contact-grid a{display:block;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.04);border-radius:16px;padding:22px 24px;transition:background .2s, transform .2s, border-color .2s}
   .contact-grid a:hover{background:rgba(255,255,255,.08);transform:translateY(-3px);border-color:rgba(230,194,122,.5)}
   .contact-grid small{display:block;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-2);font-weight:600}
@@ -317,7 +318,7 @@
     .timeline{margin-left:22px} .timeline::before{left:-22px} .role::before{left:-28px}
     .role{padding:24px}
     .about-grid,.feature-body,.projects,.edu{grid-template-columns:1fr;gap:28px}
-    .skills,.contact-grid{grid-template-columns:1fr}
+    .skills{grid-template-columns:1fr} .contact-grid{grid-template-columns:1fr 1fr}
     .feature-body{padding:28px}
     section{padding:76px 0}
   }
@@ -650,6 +651,7 @@
       </div>
     </div>
     <div class="contact-grid">
+      <a href="tel:+61403477584"><small>Phone</small><span>+61 403 477 584</span></a>
       <a href="mailto:frenvil701@gmail.com"><small>Email</small><span>frenvil701@gmail.com</span></a>
       <a href="https://www.linkedin.com/in/renvilfurtado-6b419b238" target="_blank" rel="noopener"><small>LinkedIn</small><span>in/renvilfurtado →</span></a>
       <a href="https://github.com/Renvil19" target="_blank" rel="noopener"><small>GitHub</small><span>github.com/Renvil19 →</span></a>
